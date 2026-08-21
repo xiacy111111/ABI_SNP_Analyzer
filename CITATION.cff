@@ -17,8 +17,8 @@ authors:
 version: 1.0.0
 date-released: 2026-07-21
 license: MIT
-url: "https://github.com/xiacy111111/abi-snp-analyzer"
-repository-code: "https://github.com/xiacy111111/abi-snp-analyzer"
+url: "https://github.com/xiacy111111/ABI_SNP_Analyzer"
+repository-code: "https://github.com/xiacy111111/ABI_SNP_Analyzer"
 abstract: >-
   ABI-SNP Analyzer is a free, open-source desktop application for automated
   SNP genotyping and population genetic analysis from Sanger sequencing

@@ -57,18 +57,18 @@ ABI-SNP Analyzer 是一款免费、开源的桌面应用程序，用于从 ABI �
 
 ### 3.1 独立可执行文件（推荐）
 
-1. 从 [GitHub Releases](https://github.com/xiacy111111/abi-snp-analyzer/releases) 下载 `ABI_SNP_Analyzer_v1.0.0.exe`。
+1. 从 [GitHub Releases](https://github.com/xiacy111111/ABI_SNP_Analyzer/releases) 下载 `ABI_SNP_Analyzer_v1.0.0.exe`。
 2. 将 `muscle.exe`（以及可选的 `blastn.exe`）放入与 EXE 相同的文件夹。
 3. 双击 `ABI_SNP_Analyzer_v1.0.0.exe` 启动软件。
 
 ### 3.2 从源代码运行
 
 ```bash
-git clone https://github.com/xiacy111111/abi-snp-analyzer.git
+git clone https://github.com/xiacy111111/ABI_SNP_Analyzer.git
 cd abi-snp-analyzer && git checkout v1.0.0
 python -m venv .venv && .venv\Scripts\activate
 pip install -r requirements.txt
-python abi_to_snp_analyzer_v1.0.0.py
+python src/abi_to_snp_analyzer_v1.0.0.py
 ```
 
 ---
@@ -307,8 +307,8 @@ A: 每次运行都会生成 `analysis_metadata.json` 文件，记录所有参数
 
 ## 联系与支持
 
-- **GitHub**: https://github.com/xiacy111111/abi-snp-analyzer
-- **问题反馈**: https://github.com/xiacy111111/abi-snp-analyzer/issues
+- **GitHub**: https://github.com/xiacy111111/ABI_SNP_Analyzer
+- **问题反馈**: https://github.com/xiacy111111/ABI_SNP_Analyzer/issues
 - **邮箱**: 25061300031@stu.xidian.edu.cn
 
 ---

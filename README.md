@@ -139,7 +139,7 @@ ABI-SNP Analyzer follows a three-layer architecture:
 
 | Module | Responsibility |
 |---|---|
-| `abi_to_snp_analyzer_v1.0.0.py` | GUI, ABIF parser, pipeline orchestration |
+| `src/abi_to_snp_analyzer_v1.0.0.py` | GUI, ABIF parser, pipeline orchestration |
 | `population_genetics.py` | Statistical calculations and export formatting |
 | `chromatogram.py` | Chromatogram processing and visualization helpers |
 
@@ -164,7 +164,7 @@ Biopython, openpyxl, Pillow. External tools: MUSCLE v5, BLAST+ 2.12+.
 ### Standalone Executable
 
 1. Download the latest `ABI_SNP_Analyzer_v1.0.0.exe` from
-   [Releases](https://github.com/xiacy111111/abi-snp-analyzer/releases).
+   [Releases](https://github.com/xiacy111111/ABI_SNP_Analyzer/releases).
 2. Place `muscle.exe` (and optionally `blastn.exe`) in the same directory
    as the executable, or ensure they are on the system PATH.
 3. Double-click `ABI_SNP_Analyzer_v1.0.0.exe` to launch.
@@ -172,11 +172,11 @@ Biopython, openpyxl, Pillow. External tools: MUSCLE v5, BLAST+ 2.12+.
 ### From Source
 
 ```bash
-git clone https://github.com/xiacy111111/abi-snp-analyzer.git
+git clone https://github.com/xiacy111111/ABI_SNP_Analyzer.git
 cd abi-snp-analyzer && git checkout v1.0.0
 python -m venv .venv && .venv\Scripts\activate
 pip install -r requirements.txt
-python abi_to_snp_analyzer_v1.0.0.py
+python src/abi_to_snp_analyzer_v1.0.0.py
 ```
 
 ## Quick Start
@@ -312,19 +312,23 @@ amortized. Population genetics analysis time grows modestly with sample size.
 ## Repository Structure
 
 ```
-abi-snp-analyzer/
-  abi_to_snp_analyzer_v1.0.0.py   # Main application (GUI + pipeline)
-  population_genetics.py           # Population genetics statistics module
-  chromatogram.py                  # Chromatogram processing helpers
+ABI_SNP_Analyzer/
+  src/
+    abi_to_snp_analyzer_v1.0.0.py # Main application (GUI + pipeline)
+    population_genetics.py         # Population genetics statistics module
+    chromatogram.py                # Chromatogram processing helpers
   requirements.txt                 # Python dependencies
-  readme.md                        # This file
+  README.md                        # This file
   LICENSE                          # MIT License
   THIRD_PARTY_NOTICES.md           # Third-party software notices
   CHANGELOG.md                     # Release history
   CITATION.cff                     # Citation metadata (CFF format)
   CONTRIBUTING.md                  # Contribution guidelines
   version_info.txt                 # Windows EXE version metadata
-  ABI_SNP_Analyzer_v1.0.0.spec     # PyInstaller build specification
+  bin/                             # Bundled external tools (MUSCLE, BLASTN+)
+  docx/                            # User manuals (EN/CN)
+  examples/                        # Example .ab1 input files
+  genome/                          # Example reference FASTA
   tests/                           # Unit tests (pytest)
     test_*.py
   .github/workflows/               # CI configuration
@@ -344,7 +348,7 @@ are welcome. Before submitting an issue, please:
 2. Provide OS version, software version, and parameter settings.
 3. Include a minimal reproducible example if possible.
 
-Use the [GitHub issue tracker](https://github.com/xiacy111111/abi-snp-analyzer/issues)
+Use the [GitHub issue tracker](https://github.com/xiacy111111/ABI_SNP_Analyzer/issues)
 for public reports. Email [25061300031@stu.xidian.edu.cn](mailto:25061300031@stu.xidian.edu.cn)
 for private inquiries.
 
@@ -375,12 +379,12 @@ BibTeX:
 | | Description | Metadata |
 |---|---|---|
 | C1 | Current code version | v1.0.0 |
-| C2 | Permanent link to repository | https://github.com/xiacy111111/abi-snp-analyzer |
+| C2 | Permanent link to repository | https://github.com/xiacy111111/ABI_SNP_Analyzer |
 | C3 | Legal code license | MIT License |
 | C4 | Code versioning system | git |
 | C5 | Languages and tools | Python 3, Tkinter, NumPy, Pandas, Matplotlib, Biopython, MUSCLE, BLASTN+ |
 | C6 | Requirements and dependencies | Windows 7–11 (64-bit); Python 3.8+; MUSCLE v5; BLAST+ 2.12+ |
-| C7 | Documentation | https://github.com/xiacy111111/abi-snp-analyzer |
+| C7 | Documentation | https://github.com/xiacy111111/ABI_SNP_Analyzer |
 | C8 | Support email | 25061300031@stu.xidian.edu.cn |
 
 ## License

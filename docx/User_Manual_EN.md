@@ -65,18 +65,18 @@ reference genome anchoring via BLASTN, and built-in population genetic analysis
 ### 3.1 Standalone Executable (Recommended)
 
 1. Download `ABI_SNP_Analyzer_v1.0.0.exe` from
-   [GitHub Releases](https://github.com/xiacy111111/abi-snp-analyzer/releases).
+   [GitHub Releases](https://github.com/xiacy111111/ABI_SNP_Analyzer/releases).
 2. Place `muscle.exe` (and optionally `blastn.exe`) in the same folder.
 3. Double-click `ABI_SNP_Analyzer_v1.0.0.exe` to launch.
 
 ### 3.2 Run from Source
 
 ```bash
-git clone https://github.com/xiacy111111/abi-snp-analyzer.git
+git clone https://github.com/xiacy111111/ABI_SNP_Analyzer.git
 cd abi-snp-analyzer && git checkout v1.0.0
 python -m venv .venv && .venv\Scripts\activate
 pip install -r requirements.txt
-python abi_to_snp_analyzer_v1.0.0.py
+python src/abi_to_snp_analyzer_v1.0.0.py
 ```
 
 ---
@@ -339,8 +339,8 @@ parameters and dependency versions for reproducibility.
 
 ## Contact & Support
 
-- **GitHub**: https://github.com/xiacy111111/abi-snp-analyzer
-- **Issue Tracker**: https://github.com/xiacy111111/abi-snp-analyzer/issues
+- **GitHub**: https://github.com/xiacy111111/ABI_SNP_Analyzer
+- **Issue Tracker**: https://github.com/xiacy111111/ABI_SNP_Analyzer/issues
 - **Email**: 25061300031@stu.xidian.edu.cn
 
 ---
