@@ -22,7 +22,7 @@ VSVersionInfo(
                         StringStruct("InternalName", "ABI_SNP_Analyzer"),
                         StringStruct(
                             "LegalCopyright",
-                            "Copyright (c) 2026 Chengyu Xia et al.",
+                            "Copyright (c) 2026 Chengyu Xia, Wenhui Chu, Pengbo Ning.",
                         ),
                         StringStruct("OriginalFilename", "ABI_SNP_Analyzer_v1.1.0.exe"),
                         StringStruct("ProductName", "ABI-SNP Analyzer"),

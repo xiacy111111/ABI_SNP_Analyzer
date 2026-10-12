@@ -49,11 +49,11 @@ reference genome anchoring via BLASTN, and built-in population genetic analysis
 | OS | Windows 7 (64-bit) | Windows 10/11 (64-bit) |
 | RAM | 4 GB | 8 GB or more |
 | Disk | 500 MB | 1 GB+ (excluding reference genomes) |
-| External tools | MUSCLE v5 | BLAST+ 2.12+ (optional, for genome coordinate mapping) |
+| External tools | MUSCLE (v3.8.31 or v5) | BLAST+ 2.17.0+ (optional, for genome coordinate mapping) |
 
 **External dependencies (download separately):**
-- **MUSCLE v5**: Multiple sequence aligner — https://www.drive5.com/muscle/
-- **BLAST+ 2.12+**: Reference genome alignment (optional) — https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+- **MUSCLE** (v3.8.31 or v5, auto-detected): Multiple sequence aligner — https://www.drive5.com/muscle/
+- **BLAST+ 2.17.0+**: Reference genome alignment (optional) — https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
 
 > Tip: Place `muscle.exe` (and optionally `blastn.exe`) in the same directory
 > as the application, or specify their paths via the GUI.
@@ -360,7 +360,7 @@ region validation study in Red tilapia (*Oreochromis* spp.).
 
 ### 10.1 Data Preparation
 - 88 .ab1 Sanger sequencing files (44 salt-tolerant + 44 salt-sensitive individuals)
-- MUSCLE v5 (`muscle.exe`)
+- MUSCLE v3.8.31 (`muscle.exe`)
 - Nile tilapia reference genome FASTA (~1 GB)
 - NCBI BLAST+ (`blastn.exe`)
 
@@ -399,7 +399,7 @@ region validation study in Red tilapia (*Oreochromis* spp.).
 ## 11. FAQ
 
 **Q: The software reports "MUSCLE file not found." What should I do?**
-A: Ensure the `muscle.exe` path is correct. Download MUSCLE v5 from
+A: Ensure the `muscle.exe` path is correct. Download MUSCLE (v3.8.31 or v5) from
 https://www.drive5.com/muscle/.
 
 **Q: How long does reference genome mapping take?**
@@ -436,8 +436,8 @@ parameters and dependency versions for reproducibility.
 
 - **GitHub**: https://github.com/xiacy111111/abi-snp-analyzer
 - **Issue Tracker**: https://github.com/xiacy111111/abi-snp-analyzer/issues
-- **Email**: chengyu.xia@xidian.edu.cn
+- **Email**: pbning@xidian.edu.cn
 
 ---
 
-*ABI-SNP Analyzer v1.1.0 | MIT License | Copyright (c) 2026 Chengyu Xia*
+*ABI-SNP Analyzer v1.1.0 | MIT License | Copyright (c) 2026 Chengyu Xia, Wenhui Chu, Pengbo Ning*

@@ -12,20 +12,20 @@ independently and comply with their respective licenses.
 | Field | Detail |
 |---|---|
 | **Purpose** | Multiple sequence alignment of IUPAC-coded FASTA sequences |
-| **Version used in development** | v5.3 (5.3) |
+| **Version used in development** | v3.8.31 |
 | **Author** | Robert C. Edgar |
 | **Website** | https://www.drive5.com/muscle/ |
 | **Download URL** | https://www.drive5.com/muscle/downloads.htm |
-| **License** | MUSCLE is free for non-commercial use. See https://www.drive5.com/muscle/license.htm |
+| **License** | Freely available for use; see license terms at https://www.drive5.com/muscle/license.htm |
 | **Modifications** | None — used as-is, binary unmodified |
 | **SHA256** | Not computed (user-provided binary) |
 | **Citation** | Edgar, R.C. (2004). MUSCLE: multiple sequence alignment with high accuracy and high throughput. *Nucleic Acids Research*, 32(5), 1792–1797. |
 
 ### How invoked
 ```
-muscle -align input.fasta -output alignment.aln
+muscle -in input.fasta -out alignment.aln
 ```
-For MUSCLE v3: `muscle -in input.fasta -out alignment.aln` (auto-detected at runtime).
+This is the MUSCLE v3.8.31 command line used for all analyses in the manuscript. MUSCLE v5 (`muscle -align ... -output ...`) is auto-detected and also supported at runtime.
 
 ---
 

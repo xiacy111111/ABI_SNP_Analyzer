@@ -109,7 +109,7 @@ conservation biology, and molecular breeding.
 - Diploid genotype matrix output (Excel) with per-locus QC statistics.
 
 ### Reference Genome Mapping
-- BLASTN+ [14] in `-subject` mode — no pre-built database required.
+- BLAST+ [14] in `-subject` mode — no pre-built database required.
 - Positive/negative strand coordinate handling.
 - Coordinate-aware SNP identifiers (e.g., `chr1:1234567G>A`).
 
@@ -148,7 +148,7 @@ ABI-SNP Analyzer follows a three-layer architecture:
 | `heterozygote_validation.py` | Genotype-call validation against a curated truth table |
 
 **Technology stack:** Python 3, Tkinter, NumPy, SciPy, Pandas, Matplotlib,
-Biopython, openpyxl, Pillow. External tools: MUSCLE v5, BLAST+ 2.12+.
+Biopython, openpyxl, Pillow. External tools: MUSCLE v3.8.31, BLAST+ 2.17.0+.
 
 ## System Requirements
 
@@ -160,8 +160,8 @@ Biopython, openpyxl, Pillow. External tools: MUSCLE v5, BLAST+ 2.12+.
 | Python | Not required (standalone .exe) | 3.8+ for running from source |
 
 **External dependencies (must be installed separately):**
-- [MUSCLE v5](https://www.drive5.com/muscle/) — multiple sequence alignment
-- [BLAST+ 2.12+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/) — optional, for reference genome mapping
+- [MUSCLE v3.8.31](https://www.drive5.com/muscle/) — multiple sequence alignment
+- [BLAST+ 2.17.0+](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/) — optional, for reference genome mapping
 
 ## Installation
 
@@ -182,6 +182,9 @@ python -m venv .venv && .venv\Scripts\activate
 pip install -r requirements.txt
 python abi_to_snp_analyzer_v1.1.0.py
 ```
+
+> The development/tested environment: Python 3.13, NumPy 2.5.4, pandas 2.3.3,
+> SciPy 1.18.1, Matplotlib 3.11.2, Biopython 1.88, openpyxl 3.1.5.
 
 ## Quick Start
 
@@ -279,13 +282,15 @@ an 861-bp consensus sequence with 10 detected SNP loci (880 genotype data
 points). Genotype accuracy was **99.8%** (878/880 concordant calls) compared
 with manually verified genotypes.
 
-**Population analysis:** Salt-tolerant individuals exhibited slightly higher
-genetic diversity (mean Ho = 0.4273, mean PIC = 0.3072) than salt-sensitive
-individuals (mean He = 0.3207, mean PIC = 0.2460). Overall Fst = 0.0443.
-AMOVA attributed 5.93% of variation to between-population differences
-(Phi = 0.0593, p = 0.0030), consistent with independent Arlequin validation
-(Fst = 0.04919, p = 0.00293). Two SNPs showed significant differentiation
-at p < 0.05.
+**Population analysis:** After LD-based pruning to six representative SNPs,
+the salt-tolerant group (Pop1) showed mean Ho = 0.365 ± 0.137, He = 0.345 ± 0.128
+and PIC = 0.278 ± 0.082, while the salt-sensitive group (Pop2) showed mean
+Ho = 0.455 ± 0.134, He = 0.390 ± 0.097 and PIC = 0.318 ± 0.080. AMOVA attributed
+4.63% of the total genetic variation to between-population differences
+(Phi = 0.0463, p = 0.0100), closely comparable to independent Arlequin
+validation using the pairwise-difference distance (FST = 0.0390, p = 0.0059).
+Genotype-frequency chi-square tests confirmed significant differentiation at
+SNP_400 (p = 0.0030).
 
 ## Performance
 
@@ -356,22 +361,22 @@ are welcome. Before submitting an issue, please:
 3. Include a minimal reproducible example if possible.
 
 Use the [GitHub issue tracker](https://github.com/xiacy111111/abi-snp-analyzer/issues)
-for public reports. Email [chengyu.xia@xidian.edu.cn](mailto:chengyu.xia@xidian.edu.cn)
+for public reports. Email [pbning@xidian.edu.cn](mailto:pbning@xidian.edu.cn)
 for private inquiries.
 
 ## Citation
 
 If you use ABI-SNP Analyzer in your research, please cite:
 
-> Xia, C. & Xia, X. (2026). ABI-SNP Analyzer: An open-source desktop
-> application for automated SNP genotyping and population genetic analysis
-> from Sanger sequencing chromatograms. *SoftwareX*.
+> Xia, C., Chu, W., & Ning, P. (2026). ABI-SNP Analyzer: An open-source
+> desktop application for automated SNP genotyping and population genetic
+> analysis from Sanger sequencing chromatograms. *SoftwareX*.
 > [DOI to be inserted upon acceptance]
 
 BibTeX:
 ```bibtex
 @article{xia2026abisnp,
-  author = {Xia, Chengyu and Xia, Xia},
+  author = {Xia, Chengyu and Chu, Wenhui and Ning, Pengbo},
   title = {ABI-SNP Analyzer: An open-source desktop application for
            automated SNP genotyping and population genetic analysis
            from Sanger sequencing chromatograms},
@@ -389,15 +394,15 @@ BibTeX:
 | C2 | Permanent link to repository | https://github.com/xiacy111111/abi-snp-analyzer |
 | C3 | Legal code license | MIT License |
 | C4 | Code versioning system | git |
-| C5 | Languages and tools | Python 3, Tkinter, NumPy, Pandas, Matplotlib, Biopython, MUSCLE, BLASTN+ |
-| C6 | Requirements and dependencies | Windows 7–11 (64-bit); Python 3.8+; MUSCLE v5; BLAST+ 2.12+ |
+| C5 | Languages and tools | Python 3, Tkinter, NumPy, Pandas, Matplotlib, Biopython, MUSCLE, BLAST+ |
+| C6 | Requirements and dependencies | Windows 7–11 (64-bit); Python 3.8+; MUSCLE v3.8.31; BLAST+ 2.17.0+ |
 | C7 | Documentation | https://github.com/xiacy111111/abi-snp-analyzer |
-| C8 | Support email | chengyu.xia@xidian.edu.cn |
+| C8 | Support email | pbning@xidian.edu.cn |
 
 ## License
 
 ABI-SNP Analyzer is released under the **MIT License**.
-Copyright (c) 2026 Chengyu Xia.
+Copyright (c) 2026 Chengyu Xia, Wenhui Chu, Pengbo Ning.
 
 See [`LICENSE`](LICENSE) for the full license text.
 
@@ -405,7 +410,7 @@ See [`LICENSE`](LICENSE) for the full license text.
 
 ABI-SNP Analyzer invokes separately distributed command-line tools at runtime:
 
-- **MUSCLE v5** (https://www.drive5.com/muscle/) — multiple sequence alignment.
+- **MUSCLE v3.8.31** (https://www.drive5.com/muscle/) — multiple sequence alignment.
 - **NCBI BLAST+ 2.17.0** (https://blast.ncbi.nlm.nih.gov/) — reference genome
   mapping.
 

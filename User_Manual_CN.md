@@ -43,11 +43,11 @@ ABI-SNP Analyzer 是一款免费、开源的桌面应用程序，用于从 ABI �
 | 操作系统 | Windows 7（64位） | Windows 10/11（64位） |
 | 内存 | 4 GB | 8 GB 及以上 |
 | 硬盘空间 | 500 MB | 1 GB 及以上（不含参考基因组） |
-| 外部工具 | MUSCLE v5 | BLAST+ 2.12+（可选，用于基因组坐标映射） |
+| 外部工具 | MUSCLE（v3.8.31 或 v5） | BLAST+ 2.17.0+（可选，用于基因组坐标映射） |
 
 **外部依赖工具（需单独下载）：**
-- **MUSCLE v5**：多序列比对工具，下载地址 https://www.drive5.com/muscle/
-- **BLAST+ 2.12+**：参考基因组比对工具（可选），下载地址 https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+- **MUSCLE**（v3.8.31 或 v5，自动识别）：多序列比对工具，下载地址 https://www.drive5.com/muscle/
+- **BLAST+ 2.17.0+**：参考基因组比对工具（可选），下载地址 https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
 
 > 提示：外部工具只需将 `muscle.exe`（和可选的 `blastn.exe`）放置在软件同一目录下，或通过界面指定路径。
 
@@ -305,7 +305,7 @@ S04,PopB,1,2,0,0,1,1
 
 ### 10.1 数据准备
 - 88 个 .ab1 Sanger 测序文件（44 个耐盐个体 + 44 个盐敏感个体）
-- MUSCLE v5 (`muscle.exe`)
+- MUSCLE v3.8.31 (`muscle.exe`)
 - 尼罗罗非鱼参考基因组 FASTA 文件（约 1 GB）
 - NCBI BLAST+ (`blastn.exe`)
 
@@ -344,7 +344,7 @@ S04,PopB,1,2,0,0,1,1
 ## 11. 常见问题
 
 **Q: 软件提示"MUSCLE file not found"怎么办？**
-A: 请确认 `muscle.exe` 路径设置正确。可从 https://www.drive5.com/muscle/ 下载 MUSCLE v5。
+A: 请确认 `muscle.exe` 路径设置正确。可从 https://www.drive5.com/muscle/ 下载 MUSCLE（v3.8.31 或 v5）。
 
 **Q: 参考基因组映射需要多长时间？**
 A: 取决于参考基因组大小。尼罗罗非鱼基因组（约 1 GB）参考下，BLASTN 比对通常需要数秒至数十秒。
@@ -373,8 +373,8 @@ A: 每次运行都会生成 `analysis_metadata.json` 文件，记录所有参数
 
 - **GitHub**: https://github.com/xiacy111111/abi-snp-analyzer
 - **问题反馈**: https://github.com/xiacy111111/abi-snp-analyzer/issues
-- **邮箱**: chengyu.xia@xidian.edu.cn
+- **邮箱**: pbning@xidian.edu.cn
 
 ---
 
-*ABI-SNP Analyzer v1.1.0 | MIT License | Copyright (c) 2026 Chengyu Xia*
+*ABI-SNP Analyzer v1.1.0 | MIT License | Copyright (c) 2026 Chengyu Xia, Wenhui Chu, Pengbo Ning*
