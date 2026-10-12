@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it as follows."
+title: "ABI-SNP Analyzer"
+authors:
+  - family-names: Xia
+    given-names: Chengyu
+    affiliation: "Xidian University"
+    orcid: ""
+version: 1.1.0
+date-released: 2026-10-11
+license: MIT
+url: "https://github.com/xiacy111111/abi-snp-analyzer"
+repository-code: "https://github.com/xiacy111111/abi-snp-analyzer"
+abstract: >-
+  ABI-SNP Analyzer is a free, open-source desktop application for automated
+  SNP genotyping and population genetic analysis from Sanger sequencing
+  chromatograms. It provides an end-to-end graphical workflow from raw Applied
+  Biosystems .ab1 files to quality-control plots, IUPAC-coded sequences,
+  multiple-sequence alignments, diploid genotype matrices, reference-genome
+  coordinates, population genetic statistics, and data files for commonly used
+  downstream software.
+keywords:
+  - SNP genotyping
+  - population genetics
+  - Sanger sequencing
+  - chromatogram analysis
+  - ABIF
+  - IUPAC
+  - F-statistics
+  - AMOVA
+  - Hardy-Weinberg equilibrium
+type: software
