@@ -50,12 +50,12 @@ output/
 *.csv
 !data/*.csv
 
-# Regenerated analysis outputs inside example/ are not tracked
-# (example/ only carries the .ab1 input files)
-example/**/*.png
-example/**/*.fasta
-example/**/*.aln
-example/**/*.json
+# Regenerated analysis outputs inside examples/ are not tracked
+# (examples/ only carries the .ab1 input files)
+examples/**/*.png
+examples/**/*.fasta
+examples/**/*.aln
+examples/**/*.json
 
 # Large data (reference genomes, external tools)
 genome/

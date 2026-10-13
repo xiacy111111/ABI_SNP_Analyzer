@@ -342,7 +342,7 @@ abi-snp-analyzer/
   ABI_SNP_Analyzer_v1.1.0.spec     # PyInstaller build specification (<100 MB build)
   tests/                           # Unit tests (pytest)
     test_*.py
-  example/                         # Example .ab1 input files (rice/ and tilapia/)
+  examples/                        # Example .ab1 input files (rice/ and tilapia/)
   .github/workflows/               # CI configuration
     tests.yml
 ```
