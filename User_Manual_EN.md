@@ -258,10 +258,10 @@ first asks how linked SNPs should be handled (§8.3) and then computes:
 | Data overview | Sample and locus counts per population |
 | Genetic diversity | Observed heterozygosity (Ho), expected heterozygosity (He), polymorphic information content (PIC) |
 | HWE exact test | Per-locus, per-population Hardy-Weinberg equilibrium exact test p-values [Guo & Thompson 1992; Wigginton et al. 2005] |
-| WC84 F-statistics | Fis (inbreeding coefficient), Fst (differentiation), Fit (total) with 999 permutation tests [Weir & Cockerham 1984] |
-| Null allele frequency | Brookfield estimator [Brookfield 1996] |
+| WC84 F-statistics | Fis (inbreeding coefficient), Fst (differentiation), Fit (total) with 1,000 permutation tests [Weir & Cockerham 1984] |
+| Null allele frequency | Brookfield estimator 3 [Brookfield 1996] |
 | AMOVA | Analysis of molecular variance with Phi-statistic and significance p-value [Excoffier et al. 1992] |
-| Genotype frequency chi-square | Inter-population genotype frequency difference test with Bonferroni-corrected p-values |
+| Genotype frequency chi-square | Inter-population genotype frequency difference test with Benjamini-Hochberg FDR-corrected p-values (Bonferroni also reported) |
 | Interactive visualization | Per-locus genotype frequency bar charts (300 DPI PNG/PDF export) |
 | Summary report | All statistical results in Excel format with raw and corrected p-values |
 

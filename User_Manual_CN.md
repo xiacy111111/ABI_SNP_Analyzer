@@ -225,10 +225,10 @@ python abi_to_snp_analyzer_v1.1.0.py
 | 数据概览 | 各群体样本数和位点数 |
 | 遗传多样性 | 观测杂合度 (Ho)、期望杂合度 (He)、多态信息含量 (PIC) |
 | Hardy-Weinberg 平衡检验 | 每个位点在每个群体中的 HWE 精确检验 p 值 [Guo & Thompson 1992; Wigginton et al. 2005] |
-| WC84 F-统计量 | Fis（群体内近交系数）、Fst（群体间分化系数）、Fit（总近交系数），含 999 次置换检验 [Weir & Cockerham 1984] |
-| 零等位基因频率 | Brookfield 估计量 [Brookfield 1996] |
+| WC84 F-统计量 | Fis（群体内近交系数）、Fst（群体间分化系数）、Fit（总近交系数），含 1,000 次置换检验 [Weir & Cockerham 1984] |
+| 零等位基因频率 | Brookfield 估计量 3 [Brookfield 1996] |
 | AMOVA | 分子方差分析，含 Phi-统计量和显著性 p 值 [Excoffier et al. 1992] |
-| 基因型频率卡方检验 | 群体间基因型频率差异检验，Bonferroni 校正 p 值 |
+| 基因型频率卡方检验 | 群体间基因型频率差异检验，Benjamini-Hochberg FDR 校正 p 值（同时报告 Bonferroni 校正） |
 | 交互式可视化 | 每个位点的基因型频率柱状图（支持 300 DPI PNG/PDF 保存） |
 | 结果汇总 | 所有统计结果汇总为 Excel 表格，包含原始 p 值和多重检验校正值 |
 
